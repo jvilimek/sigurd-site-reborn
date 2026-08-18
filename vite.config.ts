@@ -10,8 +10,13 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // se předgeneruje do dist/client). Bez této proměnné běží standardní Lovable build.
 const staticExport = process.env["STATIC_EXPORT"] === "1";
 
+// BASE_PATH="/sigurd-site-reborn/" pro GitHub Pages v podadresáři,
+// "/" pro vlastní doménu (sigurd.cz).
+const basePath = process.env["BASE_PATH"] || "/";
+
 export default defineConfig({
   ...(staticExport ? { nitro: false as const } : {}),
+  vite: { base: basePath },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
