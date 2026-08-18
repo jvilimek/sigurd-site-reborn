@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 export function PageHero({
   title,
   subtitle,
@@ -11,7 +13,7 @@ export function PageHero({
     <section className="relative overflow-hidden border-b border-border">
       {image && (
         <img
-          src={image}
+          src={asset(image)}
           alt=""
           aria-hidden="true"
           className="absolute inset-0 size-full object-cover opacity-25"

@@ -26,10 +26,16 @@ jobs:
       - run: bun run build
         env:
           STATIC_EXPORT: "1"
+          # Vlastní doména (vars.CUSTOM_DOMAIN) => web běží na kořeni,
+          # jinak běží v podadresáři /<název-repozitáře>/.
+          BASE_PATH: ${{ vars.CUSTOM_DOMAIN != '' && '/' || format('/{0}/', github.event.repository.name) }}
       - name: Připravit statický výstup
         run: |
           touch dist/client/.nojekyll
           cp dist/client/index.html dist/client/404.html
+          if [ -n "${{ vars.CUSTOM_DOMAIN }}" ]; then
+            echo "${{ vars.CUSTOM_DOMAIN }}" > dist/client/CNAME
+          fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/client

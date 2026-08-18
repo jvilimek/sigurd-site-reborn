@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Check } from "lucide-react";
+import { asset } from "@/lib/asset";
 
 export const Route = createFileRoute("/nabor")({
   head: () => ({
@@ -34,7 +35,7 @@ function Nabor() {
       <PageHero
         title="Nábor"
         subtitle="Pokud byste měli zájem přidat se mezi nás, pak je tu několik informací a požadavků."
-        image="/img/newbies_small.jpg"
+        image={asset(("/img/newbies_small.jpg"))}
       />
       <div className="mx-auto max-w-6xl px-4 py-16">
         <div className="grid gap-12 lg:grid-cols-2">
@@ -74,13 +75,13 @@ function Nabor() {
           </div>
           <div className="grid gap-4">
             <img
-              src="/img/newbies_small.jpg"
+              src={asset(("/img/newbies_small.jpg"))}
               alt="Vítání nováčků"
               loading="lazy"
               className="w-full rounded-lg border border-border object-cover"
             />
             <img
-              src="/img/beated.jpg"
+              src={asset(("/img/beated.jpg"))}
               alt="Jiný způsob vítání nováčků na akci"
               loading="lazy"
               className="w-full rounded-lg border border-border object-cover"

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { asset } from "@/lib/asset";
 
 export type GalleryImage = { src: string; alt: string };
 
@@ -29,7 +30,7 @@ export function Gallery({ images }: { images: GalleryImage[] }) {
             className="group relative aspect-4/3 overflow-hidden rounded-md border border-border bg-card"
           >
             <img
-              src={img.src}
+              src={asset(img.src)}
               alt={img.alt}
               loading="lazy"
               className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -66,7 +67,7 @@ export function Gallery({ images }: { images: GalleryImage[] }) {
             <ChevronLeft className="size-5" />
           </button>
           <img
-            src={images[index]?.src}
+            src={asset(images[index]?.src ?? "")}
             alt={images[index]?.alt ?? ""}
             className="max-h-[85vh] max-w-full rounded-md object-contain"
             onClick={(e) => e.stopPropagation()}

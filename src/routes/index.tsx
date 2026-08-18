@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { asset } from "@/lib/asset";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,7 +26,7 @@ function Index() {
     <>
       <section className="relative overflow-hidden border-b border-border">
         <img
-          src="/img/uvodfoto2018-1.jpg"
+          src={asset(("/img/uvodfoto2018-1.jpg"))}
           alt="Skupinová fotografie bojové družiny Sigurd"
           className="absolute inset-0 size-full object-cover opacity-40"
         />
@@ -85,7 +86,7 @@ function Index() {
             </p>
           </div>
           <img
-            src="/img/camp2.png"
+            src={asset(("/img/camp2.png"))}
             alt="Stanové ležení skupiny Sigurd"
             loading="lazy"
             className="w-full rounded-lg border border-border object-cover"
@@ -96,7 +97,7 @@ function Index() {
       <section className="border-y border-border bg-card/40">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 md:grid-cols-2 md:items-center md:py-24">
           <img
-            src="/img/obrazekkramy.jpg"
+            src={asset(("/img/obrazekkramy.jpg"))}
             alt="Bojové vybavení skupiny Sigurd"
             loading="lazy"
             className="order-2 w-full rounded-lg border border-border object-cover md:order-1"
