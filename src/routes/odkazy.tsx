@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
+import { asset } from "@/lib/asset";
 
 export const Route = createFileRoute("/odkazy")({
   head: () => ({
@@ -21,13 +22,13 @@ export const Route = createFileRoute("/odkazy")({
 });
 
 const skupiny = [
-  ["Valhalla", "/img/valhalla.jpg", "http://www.walhalla.com.pl/"],
-  ["Wataha", "/img/szczoteczky.jpg", "http://wataha.com.pl/"],
-  ["Nordegard", "/img/nordegard.jpg", "http://www.nordegard.hu/"],
-  ["Nordelag", "/img/nordelag_banner.jpg", "http://nordelag.org/"],
-  ["Pretorium", "/img/pretorium.jpg", "http://pretorium.pl/"],
-  ["Percival", "/img/percival_new_banner.jpg", "http://www.percival.pl/"],
-  ["Bielska družina Nordów", "/img/bdn_big-1.jpg", "http://www.svantevit.eu/"],
+  ["Valhalla", asset("/img/valhalla.jpg"), "http://www.walhalla.com.pl/"],
+  ["Wataha", asset("/img/szczoteczky.jpg"), "http://wataha.com.pl/"],
+  ["Nordegard", asset("/img/nordegard.jpg"), "http://www.nordegard.hu/"],
+  ["Nordelag", asset("/img/nordelag_banner.jpg"), "http://nordelag.org/"],
+  ["Pretorium", asset("/img/pretorium.jpg"), "http://pretorium.pl/"],
+  ["Percival", asset("/img/percival_new_banner.jpg"), "http://www.percival.pl/"],
+  ["Bielska družina Nordów", asset("/img/bdn_big-1.jpg"), "http://www.svantevit.eu/"],
 ];
 
 function Odkazy() {
@@ -36,7 +37,7 @@ function Odkazy() {
       <PageHero
         title="Odkazy"
         subtitle="Skupiny, se kterými trénujeme, bojujeme a slavíme."
-        image="/img/obrazekkramy.jpg"
+        image={asset(asset("/img/obrazekkramy.jpg"))}
       />
       <div className="mx-auto max-w-6xl space-y-14 px-4 py-16">
         <section>
@@ -44,7 +45,7 @@ function Odkazy() {
             Náš banner
           </h2>
           <img
-            src="/img/sigurd.jpg"
+            src={asset(asset("/img/sigurd.jpg"))}
             alt="Banner skupiny Sigurd"
             loading="lazy"
             className="rounded-md border border-border"

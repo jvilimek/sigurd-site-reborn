@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
+import { asset } from "@/lib/asset";
 
 export const Route = createFileRoute("/druzina")({
   head: () => ({
@@ -36,24 +37,24 @@ const clenove = [
 ];
 
 const clenoveExtra = [
-  ["/img/martin_cekatel.jpg", "Martin"],
-  ["/img/pepa_cekatel.jpg", "Pepa"],
-  ["/img/tunel_cekatel.jpg", "Tunel"],
+  [asset("/img/martin_cekatel.jpg"), "Martin"],
+  [asset("/img/pepa_cekatel.jpg"), "Pepa"],
+  [asset("/img/tunel_cekatel.jpg"), "Tunel"],
 ];
 
 const cekatele = [
-  ["/img/radek_cekatel.jpg", "Radek"],
-  ["/img/novi_clenove_2018__0002_viktor.jpg", "Viktor"],
-  ["/img/novi_clenove_2018__0003_filip.jpg", "Filip"],
-  ["/img/novi_clenove_2018__0001_jirka.jpg", "Jirka"],
-  ["/img/novi_clenove_2018__0005_jena.jpg", "Jena"],
-  ["/img/novi_clenove_2018__0004_michal.jpg", "Michal"],
+  [asset("/img/radek_cekatel.jpg"), "Radek"],
+  [asset("/img/novi_clenove_2018__0002_viktor.jpg"), "Viktor"],
+  [asset("/img/novi_clenove_2018__0003_filip.jpg"), "Filip"],
+  [asset("/img/novi_clenove_2018__0001_jirka.jpg"), "Jirka"],
+  [asset("/img/novi_clenove_2018__0005_jena.jpg"), "Jena"],
+  [asset("/img/novi_clenove_2018__0004_michal.jpg"), "Michal"],
 ];
 
 const zaloha = [
-  ["/img/clenove__0014_marty.jpg", "Marty"],
-  ["/img/clenove__0008_taz.jpg", "Taz"],
-  ["/img/clenove__0013_rugan.jpg", "Rugan"],
+  [asset("/img/clenove__0014_marty.jpg"), "Marty"],
+  [asset("/img/clenove__0008_taz.jpg"), "Taz"],
+  [asset("/img/clenove__0013_rugan.jpg"), "Rugan"],
 ];
 
 const fileMap: Record<string, string> = {
@@ -107,7 +108,7 @@ function Druzina() {
       <PageHero
         title="Družina"
         subtitle="Velitel a jeho bojovníci. Historicky věrohodná hierarchie, pravidelný trénink, společné bitvy."
-        image="/img/uvodfoto2018-1.jpg"
+        image={asset(asset("/img/uvodfoto2018-1.jpg"))}
       />
       <div className="mx-auto max-w-6xl space-y-16 px-4 py-16">
         <section>

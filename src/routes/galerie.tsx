@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Gallery, type GalleryImage } from "@/components/site/Gallery";
+import { asset } from "@/lib/asset";
 
 export const Route = createFileRoute("/galerie")({
   head: () => ({
@@ -36,11 +37,11 @@ const bitvaPolicka: GalleryImage[] = [
 ].map(([file, alt]) => ({ src: `/img/${file}`, alt: `${alt} – Bitva Polička 2017` }));
 
 const zeZivota: GalleryImage[] = [
-  { src: "/img/uvodfoto2018-1.jpg", alt: "Skupinová fotografie družiny Sigurd" },
-  { src: "/img/camp2.png", alt: "Stanové ležení skupiny Sigurd" },
-  { src: "/img/obrazekkramy.jpg", alt: "Bojové vybavení skupiny Sigurd" },
-  { src: "/img/newbies_small.jpg", alt: "Vítání nováčků" },
-  { src: "/img/beated.jpg", alt: "Jiný způsob vítání nováčků na akci" },
+  { src: asset("/img/uvodfoto2018-1.jpg"), alt: "Skupinová fotografie družiny Sigurd" },
+  { src: asset("/img/camp2.png"), alt: "Stanové ležení skupiny Sigurd" },
+  { src: asset("/img/obrazekkramy.jpg"), alt: "Bojové vybavení skupiny Sigurd" },
+  { src: asset("/img/newbies_small.jpg"), alt: "Vítání nováčků" },
+  { src: asset("/img/beated.jpg"), alt: "Jiný způsob vítání nováčků na akci" },
 ];
 
 function Galerie() {
@@ -49,7 +50,7 @@ function Galerie() {
       <PageHero
         title="Galerie"
         subtitle="Bitvy, souboje a chvíle mezi nimi."
-        image="/img/21083318_1671875192845825_7225735284315179831_o.jpg"
+        image={asset(asset("/img/21083318_1671875192845825_7225735284315179831_o.jpg"))}
       />
       <div className="mx-auto max-w-6xl space-y-14 px-4 py-16">
         <section>

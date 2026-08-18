@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
 import { CalendarDays, MapPin, ExternalLink } from "lucide-react";
+import { asset } from "@/lib/asset";
 
 export const Route = createFileRoute("/svatobor")({
   head: () => ({
@@ -62,7 +63,7 @@ function Svatobor() {
       <PageHero
         title="Svatobor"
         subtitle="Slované a Vikingové znovu na válečné stezce! Přijďte zažít střet válečníků, stará řemesla a život našich předků nedaleko Brna."
-        image="/img/21082885_1671875049512506_4160231911238591165_o.jpg"
+        image={asset(asset("/img/21082885_1671875049512506_4160231911238591165_o.jpg"))}
       />
 
       <div className="mx-auto max-w-6xl space-y-14 px-4 py-16">

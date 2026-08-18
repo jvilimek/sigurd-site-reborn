@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Facebook, MapPin, Swords } from "lucide-react";
+import { asset } from "@/lib/asset";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
@@ -27,7 +28,7 @@ function Kontakt() {
       <PageHero
         title="Kontakt"
         subtitle="Vystoupení, spolupráce, nábor nebo jen dotaz – ozvěte se nám."
-        image="/img/camp2.png"
+        image={asset(asset("/img/camp2.png"))}
       />
       <div className="mx-auto max-w-6xl px-4 py-16">
         <div className="grid gap-6 md:grid-cols-3">
