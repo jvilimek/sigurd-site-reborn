@@ -24,13 +24,15 @@ jobs:
           bun-version: latest
       - run: bun install --frozen-lockfile
       - run: bun run build
+        env:
+          STATIC_EXPORT: "1"
       - name: Připravit statický výstup
         run: |
-          touch .output/public/.nojekyll
-          cp .output/public/index.html .output/public/404.html || true
+          touch dist/client/.nojekyll
+          cp dist/client/index.html dist/client/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .output/public
+          path: dist/client
 
   deploy:
     needs: build
