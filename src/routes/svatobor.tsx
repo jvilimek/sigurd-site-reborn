@@ -76,25 +76,44 @@ function Svatobor() {
               Ves u Oslavan
             </span>
           </div>
-          <div className="mt-6 grid grid-cols-4 gap-3 text-center">
-            {(
-              [
-                ["Dní", t?.dny],
-                ["Hodin", t?.hodin],
-                ["Minut", t?.minut],
-                ["Sekund", t?.sekund],
-              ] as const
-            ).map(([label, value]) => (
-              <div key={label} className="rounded-lg border border-border bg-background/60 py-4">
-                <div className="font-display text-2xl font-bold text-primary md:text-4xl tabular-nums">
-                  {value ?? "–"}
+          {t?.past ? (
+            <p className="mt-6 rounded-lg border border-border bg-background/60 px-4 py-5 text-sm text-muted-foreground">
+              Ročník 2026 už proběhl. Děkujeme všem, kdo dorazili – termín
+              dalšího ročníku oznámíme na{" "}
+              <a
+                href="https://www.facebook.com/sigurdnew/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary underline underline-offset-4"
+              >
+                Facebooku
+              </a>
+              .
+            </p>
+          ) : (
+            <div className="mt-6 grid grid-cols-4 gap-3 text-center">
+              {(
+                [
+                  ["Dní", t?.dny],
+                  ["Hodin", t?.hodin],
+                  ["Minut", t?.minut],
+                  ["Sekund", t?.sekund],
+                ] as const
+              ).map(([label, value]) => (
+                <div
+                  key={label}
+                  className="rounded-lg border border-border bg-background/60 py-4"
+                >
+                  <div className="font-display text-2xl font-bold text-primary md:text-4xl tabular-nums">
+                    {value ?? "–"}
+                  </div>
+                  <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">
+                    {label}
+                  </div>
                 </div>
-                <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">
-                  {label}
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </section>
 
         <section className="grid gap-10 md:grid-cols-2">
