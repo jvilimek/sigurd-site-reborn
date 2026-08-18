@@ -50,7 +50,7 @@ function Galerie() {
       <PageHero
         title="Galerie"
         subtitle="Bitvy, souboje a chvíle mezi nimi."
-        image={asset(asset("/img/21083318_1671875192845825_7225735284315179831_o.jpg"))}
+        image={asset(("/img/21083318_1671875192845825_7225735284315179831_o.jpg"))}
       />
       <div className="mx-auto max-w-6xl space-y-14 px-4 py-16">
         <section>

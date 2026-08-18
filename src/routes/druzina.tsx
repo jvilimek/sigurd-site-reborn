@@ -98,7 +98,7 @@ function PersonGrid({ people }: { people: [string, string][] }) {
 function Druzina() {
   const members: [string, string][] = [
     ...clenove.map(
-      ([key, name]) => [`/img/${fileMap[key!]}.jpg`, name!] as [string, string],
+      ([key, name]) => [asset(`/img/${fileMap[key!]}.jpg`), name!] as [string, string],
     ),
     ...clenoveExtra.map(([src, name]) => [src!, name!] as [string, string]),
   ];
@@ -108,7 +108,7 @@ function Druzina() {
       <PageHero
         title="Družina"
         subtitle="Velitel a jeho bojovníci. Historicky věrohodná hierarchie, pravidelný trénink, společné bitvy."
-        image={asset(asset("/img/uvodfoto2018-1.jpg"))}
+        image={asset(("/img/uvodfoto2018-1.jpg"))}
       />
       <div className="mx-auto max-w-6xl space-y-16 px-4 py-16">
         <section>

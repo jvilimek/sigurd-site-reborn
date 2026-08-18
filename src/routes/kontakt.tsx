@@ -28,7 +28,7 @@ function Kontakt() {
       <PageHero
         title="Kontakt"
         subtitle="Vystoupení, spolupráce, nábor nebo jen dotaz – ozvěte se nám."
-        image={asset(asset("/img/camp2.png"))}
+        image={asset(("/img/camp2.png"))}
       />
       <div className="mx-auto max-w-6xl px-4 py-16">
         <div className="grid gap-6 md:grid-cols-3">

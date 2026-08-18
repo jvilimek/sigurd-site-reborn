@@ -37,7 +37,7 @@ function Odkazy() {
       <PageHero
         title="Odkazy"
         subtitle="Skupiny, se kterými trénujeme, bojujeme a slavíme."
-        image={asset(asset("/img/obrazekkramy.jpg"))}
+        image={asset(("/img/obrazekkramy.jpg"))}
       />
       <div className="mx-auto max-w-6xl space-y-14 px-4 py-16">
         <section>
@@ -45,7 +45,7 @@ function Odkazy() {
             Náš banner
           </h2>
           <img
-            src={asset(asset("/img/sigurd.jpg"))}
+            src={asset(("/img/sigurd.jpg"))}
             alt="Banner skupiny Sigurd"
             loading="lazy"
             className="rounded-md border border-border"

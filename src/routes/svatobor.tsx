@@ -63,7 +63,7 @@ function Svatobor() {
       <PageHero
         title="Svatobor"
         subtitle="Slované a Vikingové znovu na válečné stezce! Přijďte zažít střet válečníků, stará řemesla a život našich předků nedaleko Brna."
-        image={asset(asset("/img/21082885_1671875049512506_4160231911238591165_o.jpg"))}
+        image={asset(("/img/21082885_1671875049512506_4160231911238591165_o.jpg"))}
       />
 
       <div className="mx-auto max-w-6xl space-y-14 px-4 py-16">
