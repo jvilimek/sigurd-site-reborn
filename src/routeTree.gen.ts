@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DruzinaRouteImport } from './routes/druzina'
+import { Route as GalerieRouteImport } from './routes/galerie'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as NaborRouteImport } from './routes/nabor'
+import { Route as OdkazyRouteImport } from './routes/odkazy'
+import { Route as SvatoborRouteImport } from './routes/svatobor'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DruzinaRoute = DruzinaRouteImport.update({
+  id: '/druzina',
+  path: '/druzina',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalerieRoute = GalerieRouteImport.update({
+  id: '/galerie',
+  path: '/galerie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NaborRoute = NaborRouteImport.update({
+  id: '/nabor',
+  path: '/nabor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OdkazyRoute = OdkazyRouteImport.update({
+  id: '/odkazy',
+  path: '/odkazy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SvatoborRoute = SvatoborRouteImport.update({
+  id: '/svatobor',
+  path: '/svatobor',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/druzina': typeof DruzinaRoute
+  '/galerie': typeof GalerieRoute
+  '/kontakt': typeof KontaktRoute
+  '/nabor': typeof NaborRoute
+  '/odkazy': typeof OdkazyRoute
+  '/svatobor': typeof SvatoborRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/druzina': typeof DruzinaRoute
+  '/galerie': typeof GalerieRoute
+  '/kontakt': typeof KontaktRoute
+  '/nabor': typeof NaborRoute
+  '/odkazy': typeof OdkazyRoute
+  '/svatobor': typeof SvatoborRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/druzina': typeof DruzinaRoute
+  '/galerie': typeof GalerieRoute
+  '/kontakt': typeof KontaktRoute
+  '/nabor': typeof NaborRoute
+  '/odkazy': typeof OdkazyRoute
+  '/svatobor': typeof SvatoborRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/druzina'
+    | '/galerie'
+    | '/kontakt'
+    | '/nabor'
+    | '/odkazy'
+    | '/svatobor'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/druzina'
+    | '/galerie'
+    | '/kontakt'
+    | '/nabor'
+    | '/odkazy'
+    | '/svatobor'
+  id:
+    | '__root__'
+    | '/'
+    | '/druzina'
+    | '/galerie'
+    | '/kontakt'
+    | '/nabor'
+    | '/odkazy'
+    | '/svatobor'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DruzinaRoute: typeof DruzinaRoute
+  GalerieRoute: typeof GalerieRoute
+  KontaktRoute: typeof KontaktRoute
+  NaborRoute: typeof NaborRoute
+  OdkazyRoute: typeof OdkazyRoute
+  SvatoborRoute: typeof SvatoborRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/druzina': {
+      id: '/druzina'
+      path: '/druzina'
+      fullPath: '/druzina'
+      preLoaderRoute: typeof DruzinaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galerie': {
+      id: '/galerie'
+      path: '/galerie'
+      fullPath: '/galerie'
+      preLoaderRoute: typeof GalerieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nabor': {
+      id: '/nabor'
+      path: '/nabor'
+      fullPath: '/nabor'
+      preLoaderRoute: typeof NaborRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/odkazy': {
+      id: '/odkazy'
+      path: '/odkazy'
+      fullPath: '/odkazy'
+      preLoaderRoute: typeof OdkazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/svatobor': {
+      id: '/svatobor'
+      path: '/svatobor'
+      fullPath: '/svatobor'
+      preLoaderRoute: typeof SvatoborRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DruzinaRoute: DruzinaRoute,
+  GalerieRoute: GalerieRoute,
+  KontaktRoute: KontaktRoute,
+  NaborRoute: NaborRoute,
+  OdkazyRoute: OdkazyRoute,
+  SvatoborRoute: SvatoborRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

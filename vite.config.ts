@@ -11,5 +11,19 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Statický export všech stránek (pro GitHub Pages)
+    prerender: {
+      enabled: true,
+      crawlLinks: true,
+    },
+    pages: [
+      { path: "/" },
+      { path: "/druzina" },
+      { path: "/galerie" },
+      { path: "/nabor" },
+      { path: "/svatobor" },
+      { path: "/odkazy" },
+      { path: "/kontakt" },
+    ],
   },
 });
