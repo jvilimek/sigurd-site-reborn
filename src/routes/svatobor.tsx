@@ -43,8 +43,10 @@ function useCountdown(target: Date) {
     return () => clearInterval(id);
   }, []);
   if (now === null) return null;
-  const diff = Math.max(0, target.getTime() - now);
+  const diff = target.getTime() - now;
+  if (diff <= 0) return { past: true } as const;
   return {
+    past: false as const,
     dny: Math.floor(diff / 86400000),
     hodin: Math.floor(diff / 3600000) % 24,
     minut: Math.floor(diff / 60000) % 60,
