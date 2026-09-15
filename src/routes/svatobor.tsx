@@ -208,12 +208,9 @@ function Svatobor() {
           </div>
         </section>
 
-        <section className="surface-card rounded-xl p-6 text-center">
-          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-            Festival podporuje
-          </p>
+        <div className="text-center">
           <a
-            className="mt-4 inline-block rounded-lg bg-white px-6 py-3 transition-opacity hover:opacity-80"
+            className="inline-block rounded-lg bg-white px-6 py-3 transition-opacity hover:opacity-80"
             href="https://www.kudyznudy.cz/?utm_source=kzn&utm_medium=partneri_kzn&utm_campaign=banner"
             target="_blank"
             rel="noreferrer"
@@ -225,7 +222,7 @@ function Svatobor() {
               loading="lazy"
             />
           </a>
-        </section>
+        </div>
       </div>
     </>
   );
