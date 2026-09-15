@@ -86,9 +86,6 @@ function PersonGrid({ people }: { people: [string, string][] }) {
             loading="lazy"
             className="aspect-3/4 w-full object-cover"
           />
-          <figcaption className="px-3 py-2 text-center text-sm font-medium uppercase tracking-wide text-muted-foreground">
-            {name}
-          </figcaption>
         </figure>
       ))}
     </div>
