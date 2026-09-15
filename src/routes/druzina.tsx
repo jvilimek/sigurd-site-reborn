@@ -84,7 +84,7 @@ function PersonGrid({ people }: { people: [string, string][] }) {
             src={src}
             alt={`Bojovník ${name} ze skupiny Sigurd`}
             loading="lazy"
-            className="aspect-3/4 w-full object-cover"
+            className="w-full h-auto"
           />
         </figure>
       ))}
