@@ -155,7 +155,7 @@ function Svatobor() {
             </h2>
             <a
               className="mt-3 inline-flex items-center gap-2 text-sm text-primary underline underline-offset-4"
-              href="https://sigurd.cz/wp-content/uploads/2025/03/Svatobor-2025-pravidla-%C3%BA%C4%8Dastn%C3%ADci.pdf"
+              href={asset("docs/Svatobor-2025-pravidla-ucastnici.pdf")}
               target="_blank"
               rel="noreferrer"
             >
@@ -166,7 +166,7 @@ function Svatobor() {
             </h3>
             <a
               className="mt-3 inline-flex items-center gap-2 text-sm text-primary underline underline-offset-4"
-              href="https://sigurd.cz/wp-content/uploads/2025/03/Svatobor-2025-rules-participants.pdf"
+              href={asset("docs/Svatobor-2025-rules-participants.pdf")}
               target="_blank"
               rel="noreferrer"
             >
