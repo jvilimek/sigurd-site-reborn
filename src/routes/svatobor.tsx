@@ -207,6 +207,25 @@ function Svatobor() {
             </div>
           </div>
         </section>
+
+        <section className="surface-card rounded-xl p-6 text-center">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+            Festival podporuje
+          </p>
+          <a
+            className="mt-4 inline-block rounded-lg bg-white px-6 py-3 transition-opacity hover:opacity-80"
+            href="https://www.kudyznudy.cz/?utm_source=kzn&utm_medium=partneri_kzn&utm_campaign=banner"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={asset("img/kudyznudy-logo.svg")}
+              alt="Kudyznudy – výlety a zajímavosti po Česku"
+              className="h-8 w-auto md:h-10"
+              loading="lazy"
+            />
+          </a>
+        </section>
       </div>
     </>
   );
