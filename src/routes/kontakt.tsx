@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
-import { Facebook, MapPin, Swords } from "lucide-react";
+import { Facebook } from "lucide-react";
 import { asset } from "@/lib/asset";
 
 export const Route = createFileRoute("/kontakt")({
@@ -31,7 +31,7 @@ function Kontakt() {
         image={asset(("/img/camp2.png"))}
       />
       <div className="mx-auto max-w-6xl px-4 py-16">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-1 max-w-xl mx-auto">
           <a
             href="https://www.facebook.com/sigurdnew/"
             target="_blank"
@@ -48,27 +48,6 @@ function Kontakt() {
             </p>
           </a>
 
-          <div className="surface-card rounded-xl p-6">
-            <MapPin className="size-6 text-primary" />
-            <h2 className="mt-4 font-display text-lg uppercase tracking-[0.15em]">
-              Kde působíme
-            </h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Brno a okolí. Tréninky probíhají dvakrát týdně, vystupujeme po celé
-              ČR i v zahraničí.
-            </p>
-          </div>
-
-          <div className="surface-card rounded-xl p-6">
-            <Swords className="size-6 text-primary" />
-            <h2 className="mt-4 font-display text-lg uppercase tracking-[0.15em]">
-              Vystoupení
-            </h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Nabízíme program z bojových ukázek a ukázek výcviku bojovníků –
-              pro festivaly, města i uzavřené akce.
-            </p>
-          </div>
         </div>
       </div>
     </>
